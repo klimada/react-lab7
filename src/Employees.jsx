@@ -1,4 +1,5 @@
 import React from 'react'
+import EmployeeNew from './EmployeeNew'
 
 class Employees extends React.Component {
 
@@ -33,9 +34,10 @@ colorofEmployee(a){
     const { employees, isloading,} = this.state;
     return isloading ? <p>Loading ...</p> :
       <div>
+      
         {employees.map((employee, index) => {
           return (
-            <table style={{ margin: "15px 0 0 15px" }} key={employee.id}>
+            <table style={{ margin: "15px 0 0 50px" }} key={employee.id}>
               <tbody >
               <tr style={{color:this.colorofEmployee(employee.isActive)}}>
                  <td >{employee.name}   {employee.age}</td>
